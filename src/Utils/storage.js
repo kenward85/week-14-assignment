@@ -6,6 +6,8 @@ export async function load(key, defaultValue) {
   await delay(300); // simulate network latency
   try {
     const raw = localStorage.getItem(key);
+    console.log ("todos")
+    console.log (raw)
     return raw ? JSON.parse(raw) : defaultValue;
   } catch {
     return defaultValue;
