@@ -1,0 +1,52 @@
+:root {
+  /* dark mode base */
+  --bg: #000;
+  --text: #f8f8f8;
+  --muted: #aaa;
+  --card: #111;
+  --border: #333;
+  --accent: #d32f2f; /* strong red */
+  --warn: #ff5252;
+  --ok: #2e7d32;
+  --font: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link {
+  color: var(--muted);
+}
+.nav-link.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+button {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+}
+button:hover {
+  background: #b71c1c;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.badge.warn {
+  background: #ff5252;
+  color: #000;
+}
+
