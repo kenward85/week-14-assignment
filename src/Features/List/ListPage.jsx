@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { nanoid } from 'nanoid';
-import { load, save } from '../utils/storage.js';
-import Card from '../shared/Card.jsx';
-import Loader from '../shared/Loader.jsx';
-import ListForm from '../features/lists/ListForm.jsx';
-import ListBoard from '../features/lists/ListBoard.jsx';
+import { load, save } from '../../utils/storage.js';
+import Card from '../../shared/Card.jsx';
+import Loader from '../../shared/Loader.jsx';
+import ListForm from './ListForm.jsx';
+import ListBoard from './ListBoard.jsx';
 
 // Keys for storage
 const LS_LISTS = 'ctd_lists';

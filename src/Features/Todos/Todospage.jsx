@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { nanoid } from 'nanoid';
-import { PRIORITIES } from '../utils/schema.js';
-import { load, save } from '../utils/storage.js';
-import Card from '../shared/Card.jsx';
-import Loader from '../shared/Loader.jsx';
-import TodoForm from '../features/todos/TodoForm.jsx';
-import TodoList from '../features/todos/TodoList.jsx';
+import { PRIORITIES } from '../../utils/schema.js';
+import { load, save } from '../../utils/storage.js';
+import Card from '../../shared/Card.jsx';
+import Loader from '../../shared/Loader.jsx';
+import TodoForm from './TodoForm.jsx';
+import TodoList from './TodoList.jsx';
 
 // Keys for storage
 const LS_TODOS = 'ctd_todos';

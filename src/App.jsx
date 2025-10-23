@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import NotFound from './NotFound';
+import Todospage from './Features/Todos/Todospage';
+import ListPage from './Features/List/ListPage';
 
 // Import shared layout components
 import Header from './components/Header';
@@ -24,6 +26,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             {/* Wildcard route for 404 */}
+            <Route path = "/Todos" element={<Todospage/>}/>
+            <Route path = "/Lists" element={<ListPage/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
