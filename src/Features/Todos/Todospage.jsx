@@ -34,7 +34,6 @@ function TodosPage() {
 
   // useEffect #2: persist todos when they change
   useEffect(() => {
-    console.log (todos)
     if (todos.length>0)
     save(LS_TODOS, todos).catch(() => setErr('Failed to save todos.'));
   }, [todos]);
