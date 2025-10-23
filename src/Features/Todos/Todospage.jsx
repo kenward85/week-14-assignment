@@ -1,3 +1,6 @@
+const url = `https://api.airtable.com/v0/${import.meta.env.VITE_BASE_ID}/${import.meta.env.VITE_TABLE_NAME}`
+const token = `Bearer ${import.meta.env.VITE_PAT}`
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import { PRIORITIES } from '../../utils/schema.js';
@@ -21,6 +24,7 @@ function TodosPage() {
     (async () => {
       try {
         const data = await load(LS_TODOS, []);
+        console.log (data)
         if (!cancelled) setTodos(data);
       } catch {
         if (!cancelled) setErr('Failed to load todos.');
@@ -33,6 +37,7 @@ function TodosPage() {
 
   // useEffect #2: persist todos when they change
   useEffect(() => {
+    console.log (todos)
     save(LS_TODOS, todos).catch(() => setErr('Failed to save todos.'));
   }, [todos]);
 
